@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;900&family=Ubuntu:wght@300;400&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -6,9 +8,10 @@
     list-style: none;
 }
 body {
-  line-height: 1.7;
+  /* line-height: 1.7; */
   color:black;
   background-color: rgb(23, 23, 60);
+  font-family: 'Montserrat', sans-serif;
 }
 section{
     padding: 6rem 0;
@@ -23,7 +26,7 @@ section h2{
 }
 
 nav{
-    background: transparent;
+    background:#382f6d;
     width: 100vw;
     height: 5rem;
     position: fixed;
@@ -35,6 +38,9 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.nav_container a{
+    color: midnightblue;
 }
 nav h3{
     font-size: 2rem;
@@ -49,17 +55,128 @@ nav button{
 }
 .nav_menu a{
     color: black;
-    font-size: 0.9rem;
+    font-size: 15px;
+    font-weight: 700;
     transition: all 400ms ease;
 }
 .nav_menu a:hover{
     color: rgb(237, 145, 199);
 }
 .window-scroll{
-    background: rgb(48, 48, 247);
+    background: rgb(28, 28, 50);
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
-@media (max-width:1028px){
+
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+/*---------- Courses--------- */
+.categories{
+    background: linear-gradient(180deg, #41377d 70%, #bebde7 60%);
+    /* height: 29rem; */
+}
+.categories h1{
+    /* line-height: 1; */
+    margin-bottom: 3rem;
+}
+.categories_container{
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+.categories_left{
+    margin-right: 4rem;
+}
+.categories_left p{
+    margin: 1rem 0 3rem;
+}
+.categories_left .btn{
+    display: inline-block;
+    background: white;
+    color: black;
+    padding: 1rem 2rem;
+    border: 1px solid transparent;
+    transition: all 400ms ease;
+    margin-bottom: 20px;
+}
+.categories_left .btn:hover{
+    background: transparent;
+    color: white;
+    border-color: white;
+}
+.categories_right{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+}
+.category{
+    background: rgb(75, 75, 159);
+    /* padding: 2rem; */
+    border-radius: 1rem;
+    transition: all 400ms ease;
+    text-align: center;
+    /* box-shadow: 2px 2px 10px black; */
+}
+.category:hover{
+    box-shadow: 0 3rem 3rem rgba(0,0,0,0.3);
+    z-index: 1;
+}
+.category .image img{
+    width: 100%;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+.category .btn{
+    margin: 20px 0;
+    background-color: rgb(43, 47, 141);
+    border: 1px solid black;
+    padding: 5px 20px;
+    border-radius: 5px;
+    transition: all 400ms ease;
+}
+.category .btn:hover{
+    transform: scale(1.2);
+    background: transparent;
+    color: white;
+    border-color: white;
+}
+.category h5{
+   margin: 2rem 0 1rem;
+}
+.category p{
+    font-size: 0.85rem;
+}
+
+@media screen and (max-width:1028px){
     .container{
         width: 90%;
     }
@@ -84,8 +201,35 @@ nav button{
         display: none ;
     }
     .nav_menu li{
-        width: 1005;
+        width: 100%;
         height: 5.8rem;
+        animation: animateNavItems 400ms linear forwards;
+        transform-origin: top right;
+        opacity: 0;
+    }
+    .nav_menu li:nth-child(2){
+        animation-delay: 200ms;
+    }
+    .nav_menu li:nth-child(3){
+        animation-delay: 400ms;
+    }
+    .nav_menu li:nth-child(4){
+        animation-delay: 600ms;
+    }
+    .nav_menu li:nth-child(5){
+        animation-delay: 800ms;
+    }
+    .nav_menu li:nth-child(6){
+        animation-delay: 1000ms;
+    }
+    @keyframes animateNavItems{
+        0%{
+            transform: rotateZ(-90deg) rotateX(90deg) scale(0.1);
+        }
+        100%{
+            transform: rotateZ(0) rotateX(0) scale(1);
+            opacity: 1;
+        }
     }
     .nav_menu li a {
         background: rgb(117, 117, 240);
@@ -95,7 +239,30 @@ nav button{
         display: grid;
         place-items: center;
     }
-    .nav_menu li a :hover{
-        background: rgb(52, 52, 158);
+    .nav_menu li a:hover{
+        background: rgb(36, 34, 79);
     }
+    .categories_right h3{
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width:600px){
+    .container{
+        width: 95%;
+    }
+    .nav_menu{
+        right: 3%;
+    }
+    .categories_container{
+         display: block;
+    }
+    .categories_right{
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+    }
+    .category{
+        /* padding: 1rem; */
+        border-radius: 1rem;
+    }
+    
 }
