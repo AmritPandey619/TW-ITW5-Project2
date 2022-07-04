@@ -81,7 +81,7 @@ nav button{
         width: 18rem;
         flex-direction: column;
         gap: 0;
-        display: none;
+        display: none ;
     }
     .nav_menu li{
         width: 1005;
