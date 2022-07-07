@@ -435,13 +435,41 @@
   justify-content: space-between;
   background-color: #a9d8ea;
 }
-.slider-container .carousel{
-  width: 60%;
+.slider-container .swiper{
+  width:40%;
+  height:500px;
  
 }
-.slider-container .d-block{
-  height: 500px;
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-radius: 18px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+  background-position: center !important;
+  background-size: contain !important;
 }
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}
+
+.swiper-slide:nth-child(1n) {
+  background: url('/img/Benefits of joining YB Institute.jpg');
+}
+
+.swiper-slide:nth-child(2n) {
+  background: url('/img/Coaching classes banner.jpg');
+}
+
+.swiper-slide:nth-child(3n) {
+  background: url('/img/We see a doctor in you, lets build your medical career together, Admission open _ Yb institute.jpg');
+}
+
+
 .list-group{
   width: 35%;
 }
@@ -459,13 +487,19 @@
 .list-group .indi:hover{
   transform: scale(1.2);
 }
+
 @media screen and (max-width:600px){
-  .slider_container{
-       display: block;
+  .slider-container{
+    display: block;
+    text-align: center;
+  }
+  .swiper{
+      width: 80% !important;
   }
   .list-group{
-      grid-template-columns: 1fr 1fr;
-      gap: 0.7rem;
+    width: 80%;
+    margin-top: 1rem;
+    margin-left: 2.5rem;
   }
   
 }
