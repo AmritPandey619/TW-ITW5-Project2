@@ -425,4 +425,29 @@
 
 }
 
+/* --------------banner-------------- */
 
+.slider-container{
+  width: 90%;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+}
+.slider-container .carousel{
+  width: 60%;
+ 
+}
+.slider-container .d-block{
+  height: 500px;
+}
+.list-group{
+  width: 35%;
+}
+.list-group .heading{
+  text-align: center;
+  font-size: larger;
+}
+.list-group .heading:hover{
+  background: rgb(82, 154, 249);
+  transition: all 400ms ease;
+}
