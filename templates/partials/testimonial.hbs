@@ -1,11 +1,11 @@
  <div class="hero">
         <h1>Testimonial</h1>
-        <div class="container">
+        <div class="test-container">
             <div class="indicator">
-                <span class="btn active"></span>
-                <span class="btn"></span>
-                <span class="btn"></span>
-                <span class="btn"></span>
+                <span class="btun active"></span>
+                <span class="btun"></span>
+                <span class="btun"></span>
+                <span class="btun"></span>
             </div>
             <div class="testimonial">
             <div class="slide-row" id="slide">
@@ -53,35 +53,4 @@
         </div>
     </div>
     </div>
-    <script>
-        var btn= document.getElementsByClassName("btn");
-        var slide=document.getElementById("slide");
-        btn[0].onclick=function() {
-            slide.style.transform="translateX(0px)"
-            for(i=0;i<4;i++){
-                btn[i].classList.remove("active")
-            }
-            this.classList.add("active")
-        }
-        btn[1].onclick=function() {
-            slide.style.transform="translateX(-800px)"
-            for(i=0;i<4;i++){
-                btn[i].classList.remove("active")
-            }
-            this.classList.add("active")
-        }
-        btn[2].onclick=function() {
-            slide.style.transform="translateX(-1600px)"
-            for(i=0;i<4;i++){
-                btn[i].classList.remove("active")
-            }
-            this.classList.add("active")
-        }
-        btn[3].onclick=function() {
-            slide.style.transform="translateX(-2400px)"
-            for(i=0;i<4;i++){
-                btn[i].classList.remove("active")
-            }
-            this.classList.add("active")
-        }
-    </script>
+   

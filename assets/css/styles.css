@@ -558,6 +558,8 @@ nav button{
     margin: 5px 0;
     height: auto;
 }}
+
+
 .blog{
     display: flex;
     margin: 0 69px;
@@ -571,12 +573,10 @@ nav button{
     }
 
 }
+
 .heading{
     margin-bottom: 0;
 }
-
-
-
 .blog-card{
     position: relative;
     height: 300px;
@@ -806,7 +806,7 @@ nav button{
   margin: 35px 0 5px;
   color: #fff;
 }
-.container{
+.test-container{
   width: 800px;
   height: 400px;
   position: absolute;
@@ -820,7 +820,7 @@ nav button{
   transform: translateX(-50%);
   bottom: -50px;
 }
-.btn{
+.btun{
   display: inline-block;
   height: 15px;
   width: 15px;
