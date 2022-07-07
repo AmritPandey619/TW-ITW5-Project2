@@ -121,6 +121,7 @@
   margin-top: 70px;
   padding: var(--py) var(--px) 0;
   overflow: hidden;
+  background: radial-gradient(#387989, #6dd5ed);
 }
 
 .home::before {
@@ -432,6 +433,7 @@
   margin: 20px auto;
   display: flex;
   justify-content: space-between;
+  background-color: #a9d8ea;
 }
 .slider-container .carousel{
   width: 60%;
@@ -450,4 +452,20 @@
 .list-group .heading:hover{
   background: rgb(82, 154, 249);
   transition: all 400ms ease;
+}
+.list-group .indi{
+  transition: all 400ms ease;
+}
+.list-group .indi:hover{
+  transform: scale(1.2);
+}
+@media screen and (max-width:600px){
+  .slider_container{
+       display: block;
+  }
+  .list-group{
+      grid-template-columns: 1fr 1fr;
+      gap: 0.7rem;
+  }
+  
 }
