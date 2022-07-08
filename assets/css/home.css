@@ -488,7 +488,38 @@
   transform: scale(1.2);
 }
 
-@media screen and (max-width:600px){
+@media screen and (max-width:928px){
+  .slider-container{
+    display: block;
+    text-align: center;
+  }
+  .swiper{
+      width: 80% !important;
+  }
+  .list-group{
+    width: 80%;
+    margin-top: 1rem;
+    margin-left: 4.8rem;
+  }
+}
+
+@media screen and (max-width:750px){
+  .slider-container{
+    display: block;
+    text-align: center;
+  }
+  .swiper{
+      width: 80% !important;
+  }
+  .list-group{
+    width: 80%;
+    margin-top: 1rem;
+    margin-left: 4rem;
+  }
+  
+}
+
+@media screen and (max-width:656px){
   .slider-container{
     display: block;
     text-align: center;

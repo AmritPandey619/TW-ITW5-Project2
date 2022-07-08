@@ -1,0 +1,143 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CENTERS</title>
+</head>
+<style>
+    .heading{
+  text-align: center;
+  font-size: 3rem;
+  padding:1rem;
+  padding-top: 8rem;
+  color:var(--black);
+}
+
+.heading span{
+  color:var(--blue);
+}
+    .post .box-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .post .box-container .box{
+    width:20rem;
+    margin:2rem 2rem;
+    overflow: hidden;
+    border-radius: .1rem;
+    box-shadow: 0 .3rem .5rem rgba(0,0,0,.3);
+  }
+  
+  .post .box-container .box img{
+    height:15rem;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .post .box-container .box .content{
+    padding:0 1.5rem;
+  }
+  
+  .post .box-container .box .content span{
+    color:#666;
+    font-size: 1.2rem;
+    display: block;
+    padding:1rem 0;
+  }
+  
+  .post .box-container .box .content h3{
+    font-size: 2rem;
+    color:var(--black);
+  }
+  
+  .post .box-container .box .content:hover h3{
+    color:blueviolet;
+  }
+  
+  .post .box-container .box .content p{
+    font-size: 1.0rem;
+    color:var(--black);
+  }
+  .button{
+  height:2.0rem;
+  width: 8rem;
+  background:blueviolet;
+  color:whitesmoke;
+  font-size: 1.0rem;
+  text-transform: capitalize;
+  border-radius: .5rem;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  margin:1rem 0;
+}
+
+.button::before{
+  content: '';
+  position: absolute;
+  top: -100%; left: 0;
+  height:80%;
+  width: 80%;
+  background-color: var(--black);
+  z-index: -1;
+  transition: .2s linear;
+}
+
+.button:hover:before{
+  top: 0%;
+}
+
+.button:hover{
+  box-shadow: .1rem .5rem var(--blue),
+              0 .3rem .5rem rgba(0,0,0,.3);
+}
+</style>
+<body>
+<section class="post" id="post">
+
+    <div class="container min-vh-100">
+
+        <h1 class="heading"><span></span> Our centers <span></span></h1>
+
+        <div class="box-container">
+
+            <div class="box" >
+                <img src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202008/tea_0.jpeg?ndJOhaA2O6_kIEP_RkQU9F3hcjUuT9i9&size=770:433" alt="">
+                <div class="content">
+                    <span> Chandigarh Sector 21</span>
+                    
+                    <p></p>
+                    <a href="#" target="_blank"><button class="button">Apply Now</button></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="https://economictimes.indiatimes.com/thumb/msid-78658752,width-1200,height-900,resizemode-4,imgsize-206065/coaching-institute.jpg?from=mdr" alt="">
+                <div class="content">
+                    <span> Chandigarh Sector 70</span>
+                   
+                    <p> </p>
+                    <a href="#" target="_blank"><button class="button">Apply Now</button></a>
+                </div>
+            </div>
+
+            <div class="box" >
+                <img src="https://d2nlyei8v64kfj.cloudfront.net/uploads/c/2017/3/c-resonance-coaching-institute-kota-2350.jpg" alt="">
+                <div class="content">
+                    <span>Chandigarh Sector 54</span>
+                    
+                    <p> </p>
+                    <a href="#" target="_blank"><button class="button">Apply Now</button></a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+</body>

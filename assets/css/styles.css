@@ -60,6 +60,9 @@ nav h3{
 nav button{
     display: none;
 }
+nav button i{
+  color: black ;
+}
 .nav_menu{
     display: flex;
     align-items: center;
@@ -83,14 +86,14 @@ nav button{
 /*---------- Courses--------- */
 .categories{
     background: linear-gradient(180deg, #00a6e4 70%, #ffffff 60%);
-    /* height: 29rem; */
 }
 .categories h1{
     /* line-height: 1; */
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 .categories_container{
-   
+   margin: 0 auto;
+   width: 80%;
     display: grid;
     grid-template-columns: 40% 60%;
 }
@@ -99,7 +102,7 @@ nav button{
     margin-top: 15px;
 }
 .categories_left p{
-    margin: 1rem 0 3rem;
+    margin: 0.5rem 0 3rem;
 }
 .categories_left .btn{
     display: inline-block;
@@ -177,7 +180,7 @@ nav button{
     .nav_menu{
         position: fixed;
         top: 5rem;
-        right: 5%;
+        right: 0;
         height: fit-content;
         width: 18rem;
         flex-direction: column;
@@ -226,16 +229,52 @@ nav button{
     .nav_menu li a:hover{
         background: rgb(36, 34, 79);
     }
+    .categories_left p{
+      margin: 1rem 0 2rem;
+    }
     .categories_right h3{
         font-size: 1rem;
     }
+}
+@media screen and (max-width:992px){
+  .categories{
+    background: linear-gradient(180deg, #00a6e4 80%, #ffffff 20%);
+  }
+  .categories_left p{
+    margin: 1rem 0 2rem;
+}
+}
+@media screen and (max-width:820px) {
+  .categories{
+    background: linear-gradient(180deg, #00a6e4 80%, #ffffff 10%);
+  }
+  .categories h1{
+      margin-bottom: 1rem;
+  }
+}
+@media screen and (max-width:769px){
+  .categories_container{
+    width: 95%;
+  }
+  .categories_left p{
+    margin-bottom: 1rem;
+}
+}
+@media screen and (max-width:710px){
+  .categories_left{
+    margin-right: 2rem;
+   
+}
+  .categories_container{
+    width: 100%;
+  }
 }
 @media screen and (max-width:600px){
     .nav_container{
         width: 95%;
     }
     .nav_menu{
-        right: 3%;
+        right: 0;
     }
     .categories_container{
          display: block;
