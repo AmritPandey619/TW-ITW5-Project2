@@ -1,21 +1,44 @@
 {{!-- login --}}
-<div class="center">
-  <h1>Login</h1>
-  <form method="post">
-    <div class="txt_field">
-      <input type="text" required>
-      <span></span>
-      <label>Username</label>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  Launch static backdrop modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        {{!-- <h5 class="modal-title" id="staticBackdropLabel">Login</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> --}}
+      </div>
+      <div class="modal-body">
+        <div class="center">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <h1>Login</h1>
+          <form method="post">
+            <div class="txt_field">
+              <input type="text" required>
+              <span></span>
+              <label>Username</label>
+            </div>
+            <div class="txt_field">
+              <input type="password" required>
+              <span></span>
+              <label>Password</label>
+            </div>
+            <div class="pass">Forgot Password?</div>
+            <input type="submit" value="Login">
+            <div class="signup_link">
+              Not a member? <a href="#">Signup</a>
+            </div>
+          </form>
+        </div>
+      </div>
+      {{!-- <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Understood</button>
+      </div> --}}
     </div>
-    <div class="txt_field">
-      <input type="password" required>
-      <span></span>
-      <label>Password</label>
-    </div>
-    <div class="pass">Forgot Password?</div>
-    <input type="submit" value="Login">
-    <div class="signup_link">
-      Not a member? <a href="#">Signup</a>
-    </div>
-  </form>
+  </div>
 </div>
