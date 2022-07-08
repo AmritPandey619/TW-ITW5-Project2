@@ -35,11 +35,14 @@ app.get('/terms',(req,res)=>{
 app.get('/courses',(req,res)=>{
     res.render('courses')
 })
-app.get('/blog',(req,res)=>{
+app.get('/blogpage',(req,res)=>{
     res.render('blogpage')
 })
 app.get('/about',(req,res)=>{
     res.render('about')
+})
+app.get('/signup', (req,res)=>{
+    res.render('signup')
 })
 app.listen(port, () => {
     console.log('Server is up on port 3000.')
