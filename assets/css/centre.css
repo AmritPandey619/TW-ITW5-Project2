@@ -1,4 +1,4 @@
-.heading{
+.container .heading{
     text-align: center;
     font-size: 3rem;
     padding:1rem;
@@ -6,7 +6,7 @@
     color:var(--black);
   }
   
-  .heading span{
+  .container .heading span{
     color:var(--blue);
   }
       .post .box-container{

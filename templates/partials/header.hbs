@@ -1,3 +1,4 @@
+
 <nav>
     <div class="nav_container">
         <a href="/"><h1>Y<span>B</span></h1></a>
@@ -8,12 +9,17 @@
         <li><a href="#testimonials">Testimonials</a></li>
         <li><a href="#blog">Blog</a></li>
         <li><a href="#contact-us">Contact</a></li>
+        <li><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+          Login
+        </button></li>
       </ul>
+      <button type="button" class="btn btn-primary outer-btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+          Login
+        </button>
       <button id="open-menu-btn"><i class="bi bi-list"></i></button>
       <button id="close-menu-btn"><i class="bi bi-x"></i></button>
     </div>
 </nav>
-
 
  <!-- - #HOME SECTION-->
 
@@ -76,6 +82,8 @@
         </div>
 
       </section>
+      {{>login}}
+
 {{!-- <div class="swiper mySwiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide"><img src="/img/course.jpeg" alt=""></div>

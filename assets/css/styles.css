@@ -59,7 +59,7 @@ nav{
 nav h3{
     font-size: 2rem;
 }
-nav button{
+#open-menu-btn, #close-menu-btn, .outer-btn{
     display: none;
 }
 nav button i{
@@ -169,14 +169,20 @@ nav button i{
     .nav_container{
         width: 90%;
     }
-    nav button{
+    #open-menu-btn, .outer-btn{
         display: inline-block;
-        background: transparent;
-        font-size: 1.8rem;
+        /* background: transparent; */
         color: white;
         cursor: pointer
     }
+    .outer-btn{
+      margin-left:70%;
+    }
+    #open-menu-btn{
+      font-size: 1.8rem;
+    }
     nav button#close-menu-btn{
+        font-size: 1.8rem;
         display: none;
     }
     .nav_menu{
@@ -195,6 +201,9 @@ nav button i{
         animation: animateNavItems 400ms linear forwards;
         transform-origin: top right;
         opacity: 0;
+    }
+    .nav_menu li button{
+      display: none;
     }
     .nav_menu li:nth-child(2){
         animation-delay: 200ms;
@@ -261,6 +270,9 @@ nav button i{
   .categories_left p{
     margin-bottom: 1rem;
 }
+.outer-btn{
+  margin-left:60%;
+}
 }
 @media screen and (max-width:710px){
   .categories_left{
@@ -290,6 +302,11 @@ nav button i{
         border-radius: 1rem;
     }
     
+}
+@media screen and (max-width:450px) {
+  .outer-btn{
+    margin-left:40%;
+  }
 }
 
 
