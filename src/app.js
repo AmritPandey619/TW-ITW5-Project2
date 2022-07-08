@@ -36,7 +36,7 @@ app.get('/courses',(req,res)=>{
     res.render('courses')
 })
 app.get('/blog',(req,res)=>{
-    res.render('blog')
+    res.render('blogpage')
 })
 app.get('/about',(req,res)=>{
     res.render('about')
