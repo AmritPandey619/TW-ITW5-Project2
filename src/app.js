@@ -42,8 +42,8 @@ app.get('/privacy',(req,res)=>{
 app.get('/terms',(req,res)=>{
     res.render('terms')
 })
-app.get('/courses',(req,res)=>{
-    res.render('courses')
+app.get('/Courses',(req,res)=>{
+    res.render('Courses')
 })
 app.get('/blogpage',(req,res)=>{
     res.render('blogpage')

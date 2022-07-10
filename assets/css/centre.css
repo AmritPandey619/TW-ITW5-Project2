@@ -1,4 +1,4 @@
-.container .heading{
+.c-container .heading{
     text-align: center;
     font-size: 3rem;
     padding:1rem;
@@ -6,7 +6,7 @@
     color:var(--black);
   }
   
-  .container .heading span{
+  .c-container .heading span{
     color:var(--blue);
   }
       .post .box-container{
@@ -31,6 +31,8 @@
     
     .post .box-container .box .content{
       padding:0 1.5rem;
+      opacity: 1;
+      width: 100%;
     }
     
     .post .box-container .box .content span{
@@ -53,7 +55,7 @@
       font-size: 1.0rem;
       color:var(--black);
     }
-    .button{
+    .box .button{
     height:2.0rem;
     width: 8rem;
     background:blueviolet;
@@ -68,7 +70,7 @@
     margin:1rem 0;
   }
   
-  .button::before{
+ .box .button::before{
     content: '';
     position: absolute;
     top: -100%; left: 0;
@@ -79,11 +81,11 @@
     transition: .2s linear;
   }
   
-  .button:hover:before{
+  .box .button:hover:before{
     top: 0%;
   }
   
-  .button:hover{
+  .box .button:hover{
     box-shadow: .1rem .5rem var(--blue),
                 0 .3rem .5rem rgba(0,0,0,.3);
   }
