@@ -97,4 +97,16 @@ var swiper = new Swiper(".mySwiper", {
     grabCursor: true,
   });
 
-  
+  function modifyState() {
+    let stateObj = { id: "100" };
+    window.history.replaceState(stateObj,
+                "Page 3", "/page3.html");
+}
+
+async function callLogin() {
+  let data = await fetch('http://localhost:3000/login');
+  let response = await data.json();
+  console.log(data);
+  // $("html").html(response['data']);
+ 
+}

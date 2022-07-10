@@ -62,7 +62,9 @@ app.post('/signup', async (req,res)=>{
     const email = req.body.email
     let user=await User.findOne({email})
     if(user){
-        res.render('signup')
+        res.render('signup',{
+            text:'🚫Email is already registered.'
+        })
     }
     user = new User(req.body) 
     try{
@@ -71,19 +73,19 @@ app.post('/signup', async (req,res)=>{
         res.status(201).render('index')
     }
     catch(e){
-        res.status(401)
+        res.status(401).send()
     }
 })
-
-app.post('/login', async (req,res)=>{
+var exhb = require('express-handlebars').create();
+app.get('/login', async (req,res)=>{
     try{
         const user = await User.findByCredentials(req.body.email, req.body.password)
         const token = await user.generateAuthToken()
         res.render('index')
     }catch(e){
-        res.status(400).send()
-    }
-})
+        res.status(404).send()
+   
+}})
 
 
 
