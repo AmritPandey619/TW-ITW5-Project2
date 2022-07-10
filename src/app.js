@@ -1,9 +1,18 @@
 const path = require('path')
+require('./db/mongoose') 
 const express = require('express')
-const hbs = require('hbs')//alternative to ejs
+const hbs = require('hbs')
+const User = require('./models/user')
+const bodyParser = require('body-parser')
+const client = require('./public/js/client')
+const http = require('http')
+const socketio = require('socket.io')
 
 const app = express()
-const port = process.env.PORT || 3000//process.env.PORT is ther port heroku is listening to.
+const port = process.env.PORT || 3000
+
+app.use(bodyParser.urlencoded({extended:true}));
+app.use(express.json())
 
 // Define paths for Express config
 const publicDirectoryPath = path.join(__dirname, '../assets')
@@ -17,6 +26,7 @@ hbs.registerPartials(partialsPath) //register partials
 
 // Setup static directory to serve
 app.use(express.static(publicDirectoryPath))
+app.use(express.static('public'));
 
 app.get('', (req, res) => {
     res.render('index') 
@@ -44,6 +54,40 @@ app.get('/about',(req,res)=>{
 app.get('/signup', (req,res)=>{
     res.render('signup')
 })
+
+
+
+app.post('/signup', async (req,res)=>{ 
+    console.log(req.body);
+    const email = req.body.email
+    let user=await User.findOne({email})
+    if(user){
+        res.render('signup')
+    }
+    user = new User(req.body) 
+    try{
+        await user.save() 
+        const token =await user.generateAuthToken()
+        res.status(201).render('index')
+    }
+    catch(e){
+        res.status(401)
+    }
+})
+
+app.post('/login', async (req,res)=>{
+    try{
+        const user = await User.findByCredentials(req.body.email, req.body.password)
+        const token = await user.generateAuthToken()
+        res.render('index')
+    }catch(e){
+        res.status(400).send()
+    }
+})
+
+
+
 app.listen(port, () => {
     console.log('Server is up on port 3000.')
 })
+

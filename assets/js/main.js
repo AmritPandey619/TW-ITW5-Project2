@@ -6,6 +6,7 @@ const menu = document.querySelector('.nav_menu')
 const menuBtn = document.querySelector('#open-menu-btn')
 const closeBtn = document.querySelector('#close-menu-btn')
 
+
 menuBtn.addEventListener('click', ()=>{
     menu.style.display = "flex";
     closeBtn.style.display = "inline-block";
@@ -23,6 +24,7 @@ closeBtn.addEventListener('click', closeNav)
 
 var btn= document.getElementsByClassName("btun");
 var slide=document.getElementById("slide");
+var slideNumber = 0;
 btn[0].onclick=function() {
     slide.style.transform="translateX(0px)"
     for(i=0;i<4;i++){
@@ -51,6 +53,38 @@ btn[3].onclick=function() {
     }
     this.classList.add("active")
 }
+var playSlider;
+
+var repeater = () => {
+  playSlider = setInterval(function(){
+    for(i=0;i<4;i++){
+        btn[i].classList.remove("active")
+    };
+    // slideIcons.forEach((slideIcon) => {
+    //   slideIcon.classList.remove("active");
+    // });
+
+    slideNumber++;
+
+    if(slideNumber > 3){
+      slideNumber=0;
+    }
+
+    btn[slideNumber].click();
+    // slideIcons[slideNumber].classList.add("active");
+  }, 4000);
+}
+repeater();
+
+//stop the image slider autoplay on mouseover
+slide.addEventListener("mouseover", () => {
+  clearInterval(playSlider);
+});
+
+//start the image slider autoplay again on mouseout
+slide.addEventListener("mouseout", () => {
+  repeater();
+});
 
 //banner
 var swiper = new Swiper(".mySwiper", {
@@ -62,3 +96,5 @@ var swiper = new Swiper(".mySwiper", {
     effect: "cards",
     grabCursor: true,
   });
+
+  

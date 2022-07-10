@@ -853,7 +853,7 @@ nav button i{
 .slide-row{
   display: flex;
   width: 3200px;
-  transition: 0.5s;
+  transition:all 0.5s ease-in-out;
 }
 .slide-col{
   width: 800px;
@@ -965,6 +965,7 @@ HTML CSSResult Skip Results Iframe EDIT ON a {
     font-family: 'Poppins', sans-serif;
     font-size: larger;
     letter-spacing: 3px;
+    margin-top: 5rem;
 }
 
 #blogpage-container {
