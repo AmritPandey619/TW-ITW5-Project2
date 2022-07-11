@@ -22,67 +22,10 @@ const closeNav = ()=>{
 closeBtn.addEventListener('click', closeNav)
 
 
-var btn= document.getElementsByClassName("btun");
-var slide=document.getElementById("slide");
-var slideNumber = 0;
-btn[0].onclick=function() {
-    slide.style.transform="translateX(0px)"
-    for(i=0;i<4;i++){
-        btn[i].classList.remove("active")
-    }
-    this.classList.add("active")
-}
-btn[1].onclick=function() {
-    slide.style.transform="translateX(-800px)"
-    for(i=0;i<4;i++){
-        btn[i].classList.remove("active")
-    }
-    this.classList.add("active")
-}
-btn[2].onclick=function() {
-    slide.style.transform="translateX(-1600px)"
-    for(i=0;i<4;i++){
-        btn[i].classList.remove("active")
-    }
-    this.classList.add("active")
-}
-btn[3].onclick=function() {
-    slide.style.transform="translateX(-2400px)"
-    for(i=0;i<4;i++){
-        btn[i].classList.remove("active")
-    }
-    this.classList.add("active")
-}
-var playSlider;
 
-var repeater = () => {
-  playSlider = setInterval(function(){
-    for(i=0;i<4;i++){
-        btn[i].classList.remove("active")
-    };
-    // slideIcons.forEach((slideIcon) => {
-    //   slideIcon.classList.remove("active");
-    // });
-
-    slideNumber++;
-
-    if(slideNumber > 3){
-      slideNumber=0;
-    }
-
-    btn[slideNumber].click();
-  }, 4000);
-}
-repeater();
-slide.addEventListener("mouseover", () => {
-  clearInterval(playSlider);
-});
-slide.addEventListener("mouseout", () => {
-  repeater();
-});
 
 //banner
-var swiper = new Swiper(".mySwiper", {
+var swiper = new Swiper(".myBanner", {
     autoplay: {
       delay: 2500,
       disableOnInteraction: false,
@@ -92,16 +35,16 @@ var swiper = new Swiper(".mySwiper", {
     grabCursor: true,
   });
 
-  function modifyState() {
-    let stateObj = { id: "100" };
-    window.history.replaceState(stateObj,
-                "Page 3", "/page3.html");
-}
-
-async function callLogin() {
-  let data = await fetch('http://localhost:3000/login');
-  let response = await data.json();
-  console.log(data);
-  // $("html").html(response['data']);
- 
-}
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints:{
+      600:{//width >=600
+        slidesPerView: 2
+      }
+    }
+  });

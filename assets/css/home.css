@@ -440,7 +440,7 @@
   height:500px;
  
 }
-.swiper-slide {
+.banner{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -452,20 +452,20 @@
   background-position: center !important;
   background-size: contain !important;
 }
-.swiper-slide img {
+.banner img {
   display: block;
   width: 100%;
 }
 
-.swiper-slide:nth-child(1n) {
+.banner:nth-child(1n) {
   background: url('/img/Benefits of joining YB Institute.jpg');
 }
 
-.swiper-slide:nth-child(2n) {
+.banner:nth-child(2n) {
   background: url('/img/Coaching classes banner.jpg');
 }
 
-.swiper-slide:nth-child(3n) {
+.banner:nth-child(3n) {
   background: url('/img/We see a doctor in you, lets build your medical career together, Admission open _ Yb institute.jpg');
 }
 
