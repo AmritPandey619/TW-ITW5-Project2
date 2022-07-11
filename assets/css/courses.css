@@ -33,6 +33,9 @@ body::after{
     clip-path: circle(20% at 10% 10%);
 
 }
+/* .main{
+    width: 1000px;
+} */
 .main h1{
     text-align: center;
   padding-top: 80px;
@@ -41,7 +44,7 @@ body::after{
   color: #fff;
 }
 
-.container{
+.courses-container{
     position: relative;
     display: flex;
     justify-content: center;
@@ -51,7 +54,7 @@ body::after{
     z-index: 1;
 }
 
-.container .card{
+.courses-container .c-card{
     position: relative;
     width: 280px;
     height: 400px;
@@ -67,18 +70,18 @@ body::after{
     border-left: 1px solid rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(5px);
 }
-.container .card .content {
+.courses-container .c-card .c-content {
     padding: 20px;
     text-align: center;
     transform: translateY(100px);
     opacity: 0;
     transition: 0.5s;
 }
-.container .card:hover .content {
+.courses-container .c-card:hover .c-content {
     transform: translateY(0px);
     opacity: 1;
 }
-.container .card .content h2{
+.courses-container .c-card .c-content h2{
     position: absolute;
     top: -30px;
     right: 30px;
@@ -86,23 +89,23 @@ body::after{
     color: rgba(255, 255, 255, 0.05);
     pointer-events: none;
 }
-.container .card .content h3{
+.courses-container .c-card .c-content h3{
     font-size: 1.8em;
     color: #fff;
     z-index: 1;
 }
-.container .card .content h4{
+.courses-container .c-card .c-content h4{
     
     font-size: 1.8em;
     color: #fff;
     z-index: 1;
 }
-.container .card .content p{
+.courses-container .c-card .c-content p{
     font-size: 1em;
     color: #fff;
     font-weight: 300;
 }
-.container .card .content a{
+.courses-container .c-card .c-content a{
     position: relative;
     display: inline-block;
     padding: 8px 20px;

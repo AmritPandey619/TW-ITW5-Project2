@@ -71,17 +71,12 @@ var repeater = () => {
     }
 
     btn[slideNumber].click();
-    // slideIcons[slideNumber].classList.add("active");
   }, 4000);
 }
 repeater();
-
-//stop the image slider autoplay on mouseover
 slide.addEventListener("mouseover", () => {
   clearInterval(playSlider);
 });
-
-//start the image slider autoplay again on mouseout
 slide.addEventListener("mouseout", () => {
   repeater();
 });
