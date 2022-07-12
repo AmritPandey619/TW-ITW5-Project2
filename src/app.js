@@ -54,6 +54,9 @@ app.get('/about',(req,res)=>{
 app.get('/signup', (req,res)=>{
     res.render('signup')
 })
+app.get('/contact', (req,res)=>{
+    res.render('contact')
+})
 
 
 
