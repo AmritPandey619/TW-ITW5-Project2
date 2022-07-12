@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+     <title>About Us</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
@@ -29,13 +29,71 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
+      
       <link rel="stylesheet" href="/css/home.css">
       <link rel="stylesheet" href="/css/styles.css">
-      <link rel="stylesheet" href="/css/centre.css">
-
-</head>
-
-   <script src="/js/main.js"></script>
    
-</body>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+
+  <body>
+    {{>nav}}
+    {{>login}}
+    <div class="Aboutpage" style="margin-top: 5rem;">
+      <h1 class="hover-3">About Us</h1>
+    </div>
+    <section id="About-container" style="background-color:white;">
+      <div class="about-img">
+        <img src="/img/a.jpeg" alt="" />
+      </div>
+
+      <div class="about-text">
+        <h2>Welcome to ABC , Enhance ypur Skills with best Online Courses</h2>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima rerum
+          eum numquam laboriosam sequi blanditiis amet quaerat quas expedita
+          deleniti itaque incidunt facere voluptate maiores modi autem beatae
+          quia earum facilis necessitatibus, illo dolores id? Necessitatibus
+          consectetur dolor in eius eveniet facilis provident accusantium vitae
+          quasi, explicabo, similique ad voluptas! Accusamus, aperiam?
+          Cupiditate, officia!
+        </p>
+        <div class="about-fe">
+          <img src="/img/fe1.jpeg" alt="" />
+          <div class="fe-text">
+            <h5>400+ courses</h5>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti
+              atque eos labore rerum tenetur dolorem.
+            </p>
+          </div>
+        </div>
+        <div class="about-fe">
+          <img src="/img/fe2.jpeg" alt="" />
+          <div class="fe-text">
+            <h5>Lifetime Access</h5>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti
+              atque eos labore rerum tenetur dolorem.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="trust">
+      <h1>Trusted By</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, quo.
+      </p>
+      <div class="trust-img">
+        <img src="/img/trust1.jpeg" alt="">
+        <img src="/img/fourth.jpeg" alt="">
+        <img src="/img/trust2.jpeg" alt="">
+        <img src="/img/trust3.jpeg" alt="">
+        <img src="/img/trust4.jpeg" alt="">
+        <img src="/img/fifth.jpeg" alt="">
+      </div>
+    </section>
+    {{>footer}}
+  </body>
 </html>

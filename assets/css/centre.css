@@ -20,7 +20,11 @@
       margin:2rem 2rem;
       overflow: hidden;
       border-radius: .1rem;
+      transition: all 400ms ease;
       box-shadow: 0 .3rem .5rem rgba(0,0,0,.3);
+    }
+    .post .box-container .box:hover{
+      transform: translateY(-20px);
     }
     
     .post .box-container .box img{

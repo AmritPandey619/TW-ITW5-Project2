@@ -49,7 +49,7 @@ app.get('/blogpage',(req,res)=>{
     res.render('blogpage')
 })
 app.get('/about',(req,res)=>{
-    res.render('about')
+    res.render('Aboutpage')
 })
 app.get('/signup', (req,res)=>{
     res.render('signup')
