@@ -9,7 +9,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #161623;
+    background: #698cbc;
 }
 body::before{
     content: "";
@@ -73,14 +73,14 @@ body::after{
 .courses-container .c-card .c-content {
     padding: 20px;
     text-align: center;
-    transform: translateY(100px);
-    opacity: 0;
-    transition: 0.5s;
+    /* transform: translateY(100px); */
+    opacity: 1;
+    /* transition: 0.5s; */
 }
-.courses-container .c-card:hover .c-content {
+/* .courses-container .c-card:hover .c-content {
     transform: translateY(0px);
     opacity: 1;
-}
+} */
 .courses-container .c-card .c-content h2{
     position: absolute;
     top: -30px;
