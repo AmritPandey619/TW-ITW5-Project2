@@ -48,6 +48,9 @@ app.get('/Courses',(req,res)=>{
 app.get('/blogpage',(req,res)=>{
     res.render('blogpage')
 })
+app.get('/readmore',(req,res)=>{
+    res.render('readmore')
+})
 app.get('/about',(req,res)=>{
     res.render('Aboutpage')
 })
