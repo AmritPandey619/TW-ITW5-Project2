@@ -36,6 +36,13 @@ var swiper = new Swiper(".myBanner", {
   });
 
   var swiper = new Swiper(".mySwiper", {
+    speed: 600,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: true,
+    },
+    loop: true,
+    grabCursor: true,
     slidesPerView: 1,
     spaceBetween: 30,
     pagination: {
